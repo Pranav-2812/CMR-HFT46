@@ -35,7 +35,6 @@ const ownerSchema = new mongoose.Schema({
     },
     isAdmin:{
         type:Boolean,
-        required:true,
         default:false
     }
 

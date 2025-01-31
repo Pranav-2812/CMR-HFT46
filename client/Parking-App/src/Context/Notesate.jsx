@@ -77,6 +77,7 @@ const Notesate = (props) => {
       return json;
     }
     else {
+      props.setProgress(100);
       return json;
     }
   }
