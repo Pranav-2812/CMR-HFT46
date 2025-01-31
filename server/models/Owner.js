@@ -32,6 +32,11 @@ const ownerSchema = new mongoose.Schema({
     ucc:{
         type:String
         
+    },
+    isAdmin:{
+        type:Boolean,
+        required:true,
+        default:false
     }
 
 })

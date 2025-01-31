@@ -28,6 +28,7 @@ router.get("/getVehicle", getuser, async (req, res) => {
     }
 })
 
+
 router.post("/add/vehicle", getuser, async (req, res) => {
     try {
         let user = await User.findById(req.user.id);
