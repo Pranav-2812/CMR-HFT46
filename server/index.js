@@ -8,12 +8,14 @@ var cors = require('cors');
 const {Server} = require("socket.io")
 const app = express();
 const http = require("http");
+const multer = require("multer")
+const mongoose = require("mongoose");
 // const options = {
 //   key: fs.readFileSync('../../Park.me/localhost-key.pem'),
 //   cert: fs.readFileSync('../../Park.me/localhost-cert.pem')
 // };
 const server = http.createServer(app);
-
+let gfsBucket;
 const corsOptions = {
   origin: "http://localhost:5173/",
   methods: ["GET", "POST", "PUT", "DELETE"],
@@ -45,6 +47,11 @@ app.use("/auth",require("./routes/auth"));
 app.use("/owner",require("./routes/owner"));
 app.use("/status",require("./routes/book"));
 app.use("/usr",require("./routes/user"));
+
+mongoose.connection.once("open", () => {
+  gfsBucket = new mongoose.mongo.GridFSBucket(mongoose.connection.db, { bucketName: "PendinglocationImgs" });
+  console.log("GridFSBucket initialized");
+});
 
 server.listen(3000, () => {
   console.log('Secure server running on http://127.0.0.1:3000');

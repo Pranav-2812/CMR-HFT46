@@ -22,13 +22,26 @@ const locationSchema = new mongoose.Schema({
         type:Decimal128,
         required:true
     },
+    parking_type:{
+        type:String,
+        required:true
+    },
     location_type:{
         type:String,
+        required:true
+    },
+    isPaid:{
+        type:Boolean,
         required:true
     },
     car_slots:{
         type:Number,
         
+        default:0
+    },
+    floors:{
+        type:Number,
+        required:true,
         default:0
     },
     bike_slots:{
