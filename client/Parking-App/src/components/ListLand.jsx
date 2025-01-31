@@ -47,9 +47,9 @@ const ListLand = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen font-sans" style={{ fontFamily: '"Chakra Petch", sans-serif' }}>
-      <div className="p-6 rounded-2xl w-120 h-[650px] overflow-y-auto" style={{ backgroundColor: 'yellow' }}>
-        <h2 className="text-center mb-4 text-2xl font-bold">Report Area</h2>
-        <form >
+      <div className="button-shadow p-6 w-120 max-h-[70vh] overflow-y-auto" style={{ backgroundColor: 'yellow' }}>
+        <h1 className="text-center mb-4 text-3xl font-bold">Report Area</h1>
+        <form>
           {coordinates.map((coord, index) => (
             <div key={index} className="mb-3 h-50 w-3/4 ">
               <h3 className="text-lg font-bold mb-2">Coordinate {index + 1}</h3>
@@ -77,7 +77,7 @@ const ListLand = () => {
                 <button
                   type="button"
                   onClick={() => handleGetLocation(index)}
-                  className="p-4 w-2/5 mt-4 bg-black text-white hover:bg-gray-800 cursor-pointer"
+                  className="w-full mt-2 px-4 py-2 bg-black text-white rounded-2xl hover:bg-gray-800"
                 >
                   Use My Location
                 </button>
