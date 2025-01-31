@@ -26,7 +26,7 @@ const Navbar = (props) => {
           <li className='links'><Link className='link-txt' to={"/Home"}>HOME</Link></li>
           <li className='links'><Link className='link-txt' to={"/About"}>ABOUT</Link></li>
           <li className='links'><Link className='link-txt' to={"/AvailCheck"}>AVAILABILITY</Link></li>
-          <li className='links'><Link className='link-txt' to={"/ListLand"}>LIST&nbsp;&nbsp;&nbsp;LAND</Link></li>
+          <li className='links'><Link className='link-txt' to={"/ListLand"}>LIST&nbsp;LAND</Link></li>
         </ul>
         {!localStorage.getItem("token") ? <div className="btns">
           <Link className='nav-btn' to={"/AuthSign"}><span className='link-btn' >SIGN UP</span></Link>

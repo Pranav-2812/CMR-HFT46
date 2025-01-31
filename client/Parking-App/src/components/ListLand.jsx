@@ -47,11 +47,11 @@ const ListLand = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen font-sans" style={{ fontFamily: '"Chakra Petch", sans-serif' }}>
-      <div className="p-6 rounded-2xl w-120 max-h-[60vh] overflow-y-auto" style={{ backgroundColor: 'yellow' }}>
+      <div className="p-6 rounded-2xl w-120 h-[650px] overflow-y-auto" style={{ backgroundColor: 'yellow' }}>
         <h2 className="text-center mb-4 text-2xl font-bold">Report Area</h2>
-        <form>
+        <form >
           {coordinates.map((coord, index) => (
-            <div key={index} className="mb-3 h-50">
+            <div key={index} className="mb-3 h-50 w-3/4 ">
               <h3 className="text-lg font-bold mb-2">Coordinate {index + 1}</h3>
               <label htmlFor={`latitude-${index}`} className="block text-sm font-medium mb-1">Latitude:</label>
               <input
@@ -73,11 +73,11 @@ const ListLand = () => {
                 className="h-8 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-yellow-300 text-white bg-gray-700 "
                 step="any"
               />
-              <div className="flex justify-center">
+              <div className="flex justify-center h-[35px] ">
                 <button
                   type="button"
                   onClick={() => handleGetLocation(index)}
-                  className="mt-2 px-4 py-2 bg-black text-white rounded-2xl hover:bg-gray-800"
+                  className="p-4 w-2/5 mt-4 bg-black text-white hover:bg-gray-800 cursor-pointer"
                 >
                   Use My Location
                 </button>
@@ -85,7 +85,7 @@ const ListLand = () => {
             </div>
           ))}
 
-          <div className="mb-4">
+          <div className="mb-3 h-20 w-3/4">
             <label htmlFor="imageUpload" className="block text-sm font-medium mb-1">Upload Images (Minimum 2):</label>
             <input
               type="file"
@@ -93,7 +93,7 @@ const ListLand = () => {
               name="imageUpload"
               multiple
               onChange={handleImageChange}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-yellow-300"
+              className="w-full px-3 h-8  border bg-gray-700 rounded-md focus:outline-none focus:ring"
             />
             {imageError && <p className="text-red-500 mt-1">{imageError}</p>}
             <div className="mt-2 flex flex-wrap"> {/* Added flex flex-wrap for wrapping */}
@@ -109,7 +109,7 @@ const ListLand = () => {
             </div>
           </div>
 
-          <button type="submit" className="w-1/2 bg-black text-yellow-400 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-300">
+          <button type="submit" className="w-1/2 bg-black text-yellow-400 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-300 cursor-pointer">
             Submit
           </button>
         </form>
