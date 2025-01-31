@@ -153,4 +153,59 @@ router.put("/update/locations/:id", getowner, async (req, res) => {
         console.log(error)
     }
 })
-module.exports = router
+router.get("/get-pending", getowner, async (req, res) => {
+    if (!req.owner) return res.status(501).send("Not Authorized");
+    try {
+        // Fetch all pending locations
+        const locations = await pendingLocations.find();
+
+        if (!locations || locations.length === 0) {
+            return res.status(404).json({ success: false, msg: "No pending locations found" });
+        }
+
+        // Construct response with image URLs
+        const formattedLocations = locations.map(location => ({
+            _id: location._id,
+            city: location.city,
+            address: location.address,
+            coordinates: {
+                lat1: location.lat1, long1: location.long1,
+                lat2: location.lat2, long2: location.long2,
+                lat3: location.lat3, long3: location.long3,
+                lat4: location.lat4, long4: location.long4,
+            },
+            images: [
+                `${req.protocol}://${req.get("host")}/get-image/${location.img1}`,
+                `${req.protocol}://${req.get("host")}/get-image/${location.img2}`
+            ],
+            
+        }));
+
+        res.status(200).json({ success: true, locations: formattedLocations });
+   
+    } catch (error) {
+        console.error("Error fetching pending locations:", error);
+        res.status(500).json({ success: false, msg: "Server error" });
+    }
+});
+
+
+router.get("/get-image/:filename", async (req, res) => {
+    try {
+        const file = await gfsBucket.find({ filename: req.params.filename }).toArray();
+
+        if (!file || file.length === 0) {
+            return res.status(404).json({ success: false, msg: "Image not found" });
+        }
+
+        // Set the content type and stream the image
+        res.set("Content-Type", file[0].contentType);
+        const readStream = gfsBucket.openDownloadStreamByName(req.params.filename);
+        readStream.pipe(res);
+    } catch (error) {
+        console.error("Error fetching image:", error);
+        res.status(500).json({ success: false, msg: "Server error" });
+    }
+});
+
+module.exports = router;
