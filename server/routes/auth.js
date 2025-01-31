@@ -124,6 +124,7 @@ body('password',"Password can't be empty").exists(),async(req,res)=>{
         return res.status(400).json({success,errors:result.array()})
     }
     const{email, password} = req.body;
+    console.log(password)
     try {
         let user = await User.findOne({email});
         if(!user){

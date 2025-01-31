@@ -1,3 +1,3 @@
 import {io} from "socket.io-client";
-const socket = io("https://park-me-server-fjj5.onrender.com");
+const socket = io("http://localhost:5175");
 export default socket;
