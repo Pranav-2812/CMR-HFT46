@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100vw;
+  height: 50px;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+  position: sticky;
+  background: transparent;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 15px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  background-color: rgba(0, 0, 0, 0.495);
+  padding: 15px 15px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: x-large;
+  letter-spacing: 3px;
+  color: yellow;
+}
+
+.elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20%;
+}
+
+.elements>ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 6%;
+}
+
+.nav-btn {
+  display: flex;
+  width: 150px;
+  padding: 10px 7px;
+  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  box-shadow: 7px 5px rgba(255, 255, 255, 0.4);
+  transition: all ease-in 0.2s;
+}
+
+.logout {
+  display: flex;
+  width: 250px;
+  padding: 10px 7px;
+  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  box-shadow: 7px 5px rgba(255, 255, 255, 0.4);
+  transition: all ease-in 0.2s;
+  border: none;
+}
+
+.nav-btn:hover,
+.logout:hover {
+  box-shadow: 7px 5px rgba(255, 255, 255, 0.8);
+}
+
+.links {
+  position: relative;
+  color: white;
+  display: inline-block;
+  padding: 0px 0.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links::after {
+  position: absolute;
+  left: 0px;
+  background-color: yellow;
+  content: '';
+  display: block;
+  height: .1em;
+  margin-top: .2em;
+  transition: width .5s;
+  width: 0;
+
+}
+
+.links:hover::after {
+  width: 100%;
+
+}
+
+.link-txt {
+  text-decoration: none;
+  color: white;
+}
+
+.link-btn {
+  text-decoration: none;
+  color: black;
+}

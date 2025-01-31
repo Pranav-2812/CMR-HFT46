@@ -1,0 +1,107 @@
+.sign-main{
+    width: 100vw;
+    height: 700px ;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sign-form-container{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    background-color: yellow;
+    padding: 2rem;
+    color: black;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 8px 7px rgba(243, 244, 246, 0.5);
+    
+}
+.sign-form-container>h2,.sign-form-container>h3{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.parts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+.first-half,.second-half{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-format{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    
+}
+.label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+}
+.label>label{
+    width: 60%;
+}
+.label>p{
+    width: 40%;
+    color: red;
+    width: 150px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+.input-format>input,.input-format>select{
+    width: 350px;
+    height: 35px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: white;
+    text-indent: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-btn{
+    width: 200px;
+    height: 35px;
+    padding: 5px 5px;
+    background-color: black;
+    color: yellow;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* .form-btn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+
+.Link{
+    text-decoration: none;
+    color: green;
+    font-weight: 500;
+}
+hr{
+    
+    width: 15px;
+    background-color: #333;
+}

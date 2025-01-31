@@ -1,0 +1,218 @@
+.MP {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  height: 700px;
+}
+
+.main-dash {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background-color: transparent;
+}
+
+.prof-dash {
+
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 650px;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.prof-dash>i {
+  padding: 0 0 10px 10px;
+  cursor: pointer;
+}
+
+.prof-dash>.user,
+.prof-dash>.owner {
+  display: none;
+}
+
+.prof-dash-after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 650px;
+  background-color: yellow;
+  animation: out .1s ease-in forwards;
+}
+
+.prof-dash-after>i {
+  padding: 10px 10px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: all ease-in 0.1s;
+  border-radius: 25%;
+  background-color: black;
+  color: yellow;
+
+}
+
+.disp-msg {
+  width: 500px;
+  height: 600px;
+  margin-top: 3%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+  background-color: yellow;
+  padding: 2rem;
+  color: black;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 8px 7px rgba(243, 244, 246, 0.5);
+}
+
+.disp-msg>iframe {
+  border: none;
+  scale: 2.1;
+}
+
+@keyframes out {
+  0% {
+    width: 25px;
+    opacity: 0.5;
+    color: transparent;
+  }
+
+  100% {
+    color: black;
+    width: 20%;
+    opacity: 1;
+  }
+}
+
+.user,
+.owner {
+  display: flex;
+  width: 200px;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+
+}
+
+.user>p,
+.owner>p {
+  width: 100%;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+}
+.prof-logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: black;
+  margin-left: 15%;
+  cursor: pointer;
+}
+.user>button,.owner>button{
+  width: 150px;
+  height: 50px;
+  padding: 10px 10px;
+  background: red;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: medium;
+  color: black;
+  border: none;
+  box-shadow: 8px 7px rgba(6, 6, 6, 0.722);
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+.user>button:hover,.owner>button:hover{
+  box-shadow: 8px 7px rgba(6, 6, 6, 0.504);
+}
+.main-content {
+  width: 95%;
+  height: 1000px;
+  padding: 0px 15px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 15%;
+}
+
+.loc_grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  height: fit-content;
+  padding: 0 3% 0 3%;
+  margin-top: 0%;
+}
+
+.loc_grid>h2 {
+  display: flex;
+  width: 98%;
+  height: 50px;
+  background-color: black;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(255, 255, 0, 0.8);
+  font-size: 25px;
+  align-items: center;
+  padding-left: 2%;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  padding: 2% 2%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+}
+
+
+.map {
+  width: 95%;
+  padding: 0 2% 0 2%;
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
+.maplibregl-popup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px !important;
+  height: 25px !important;
+  padding: 5px 5px !important;
+  background-color: yellow !important;
+  color: black !important;
+  font-weight: 500 !important;
+  border-radius: 0 !important;
+  box-shadow: 5px 4px rgba(0, 0, 0, 0.601) !important;
+}
+
+@media (max-width:1025px) {
+  .loc_grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    height: 100vh;
+    padding: 0 3% 0 3%;
+    margin-top: 0%;
+  }
+}

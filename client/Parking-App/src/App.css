@@ -1,0 +1,6 @@
+.hr{
+    /* style={{width:"85%",marginLeft:"7%",marginTop:"1%" ,color:"yellow !important"}} */
+    width: 100vw;
+    margin-top: 1%;
+    border-color: yellow !important;
+}

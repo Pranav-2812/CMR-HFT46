@@ -1,0 +1,21 @@
+.avail-form>hr{
+    width:150% ;
+    height: 1.5px;
+    border: none;
+    margin-bottom: 5%;
+}
+.form-btn{
+    margin-bottom: 5%;
+}
+#success-msg{
+    display: none;
+}
+#fail-msg{
+    display: none;
+}
+#fail-msg>h3{
+    font-weight: 600;
+}
+.avail-form, #avail-main, #success-msg, #fail-msg{
+    transition: all ease-in .2s;
+}

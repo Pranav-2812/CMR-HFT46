@@ -1,0 +1,66 @@
+.owner-sign{
+    width: 100vw;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.owner-sign-conatiner{
+    width: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: yellow;
+    backdrop-filter: blur(2px);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: 8px 7px rgba(243, 244, 246, 0.5);
+}
+.input-format{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.input-format>input{
+    width: 350px;
+    height: 35px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: white;
+    text-indent: 10px;
+}
+.label{
+    display: flex;
+    flex-direction: row;
+}
+.label>p{
+    color: red;
+    width: 200px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+.form-btn{
+    width: 200px;
+    height: 35px;
+    padding: 5px 5px;
+    background-color: black;
+    color: yellow;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-btn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,44 @@
+.sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 700px;
+}
+.container{
+    width: 400px ;
+    height: 300px;
+    display: flex;
+    gap:10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: yellow;
+    backdrop-filter: blur(2px);
+    box-shadow: 8px 7px rgba(255, 255, 255, 0.5);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.box-txt{
+    width: 200px;
+    padding: 10px 10px;
+    background-color: black;
+    color: yellow;
+    box-shadow: 5px 3px rgba(0, 0, 0, 0.5);
+}
+h3{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

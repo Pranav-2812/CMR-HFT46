@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.grid_main{
+    width: 95%;
+    height: 100vh;
+    padding:  0% 3% 0 3%;
+
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.grid_main>h2{
+    width: 93%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    background-color: black;
+    color: yellow;
+    z-index: 1;
+}
+.SlorGrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    height: 100vh;
+   
+}
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    margin-top: 2%;
+}
