@@ -23,6 +23,7 @@ import BikeSlotGrid from './components/BikeSlotGrid';
 import Avail from './components/Avail';
 import CarSlotGrid from './components/CarSlotGrid';
 import UserDash from './components/UserDash';
+import ListLand from './components/ListLand';
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route exact path='/AvailCheck' element={<Avail setProgress={setProgress} />}></Route>
           <Route exact path="/Dashboard/location/car_slots"element={<CarSlotGrid setProgress={setProgress}/>}></Route>
           <Route exact path='/Dashboard/user/dash' element={<UserDash setProgress={setProgress}/>}></Route>
+          <Route exact path='/ListLand' element={<ListLand setProgress={setProgress}/>}></Route>
         </Routes>
       </Notesate>
     </>
